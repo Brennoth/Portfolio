@@ -18,20 +18,27 @@ body{
 /*----------HEADER-INICIO---------*/
 .nav{
     background-color: rgba(0, 0, 0, 0.692);
-    padding: 1.5rem;
+    padding: 2rem;
+    display: flex;
 }
 .voltar{
     color: var(--color-ciano);
     text-decoration: none;
     font-size: 1.7em;
-    position: relative;
-    top: 1rem;
+    display: inline-block;
+}
+.voltar:hover{
+    color: white;
+    border-bottom: 1px solid #66FCF1;
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.1);
 }
 .list-nav{
     display: flex;
     justify-content: center;
     gap: 3rem;
     list-style: none;
+    flex: 1;
 }
 .list-nav a{
     font-size: 1.7rem;
