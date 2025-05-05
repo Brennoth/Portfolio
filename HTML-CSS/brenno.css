@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-ciano: #66FCF1;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    /*font-size: 1.6rem;*/
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+/*----------HEADER-INICIO---------*/
+.nav{
+    background-color: rgba(0, 0, 0, 0.692);
+    padding: 1.5rem;
+}
+.list-nav{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+}
+.list-nav a{
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--color-ciano);
+    display: inline-block;
+}
+.list-nav a:hover{
+    color: white;
+    border-bottom: 1px solid #66FCF1;
+    transition: all ease-in-out 0.2s;
+    transform: scale(1.1);
+}
+/*----------HEADER-FIM---------*/
+
+/*----------MAIN-INICIO------*/
+.main h1{
+    font-size: 4.8em;
+    color: var(--color-ciano);
+    text-align: center;
+    margin: 5rem 0 2rem;
+}
+.main > p{
+    font-size: 1.9em;
+    text-align: center;
+    color: #c5c6c7;
+    margin-bottom: 6rem;
+}
+.content{
+    background-color: #2A424B;
+    width: 70%;
+    padding: 2rem;
+    margin: 0 auto 6rem;
+    border-radius: 1rem;
+}
+.content h2{
+    font-size: 3.2em;
+    color: #45a29e;
+    border-bottom: 2px solid var(--color-ciano);
+    width: fit-content;
+}
+.content p{
+    font-size: 1.6em;
+    color: white;
+    margin-top: 2rem;
+}
+.habilidade ul{
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    margin-top: 2rem;
+}
+.habilidade li{
+    background-color: #45A29E;
+    font-size: 1.6em;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: bolder
+}
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.projetos article{
+    display: flex;
+    gap: 3rem;
+    background-color: #162a31;
+    padding: 1rem;
+    box-shadow: 0 2px 8px black;
+}
+.projetos article:hover{
+    transform: translateY(-5px);
+    transition: all ease-in-out 0.2s;
+}
+.projetos img{
+    width: 20rem;
+    border-radius: 2rem;
+}
+.projetos h3{
+    font-size: 1.8em;
+    color: var(--color-ciano);
+}
+/*----------MAIN-FIM----------*/
+
+/*---------FOOTER-INICIO---------*/
+.footer{
+    background-color: #0B0C10;
+    padding: 2rem;
+}
+.footer p{
+    text-align: center;
+    color: #c5c6c7;
+    font-size: 1.6em;
+}
