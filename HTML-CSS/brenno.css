@@ -69,7 +69,7 @@ body{
 }
 .content{
     background-color: #2A424B;
-    width: 70%;
+    width: 60%;
     padding: 2rem;
     margin: 0 auto 6rem;
     border-radius: 1rem;
@@ -91,12 +91,9 @@ body{
     list-style: none;
     margin-top: 2rem;
 }
-.habilidade li{
-    background-color: #45A29E;
-    font-size: 1.6em;
-    padding: 1rem 2rem;
-    border-radius: 2rem;
-    font-weight: bolder
+.habilidade img{
+    border-radius: 50%;
+    width: 8rem;
 }
 .projetos{
     display: flex;
@@ -110,6 +107,8 @@ body{
     padding: 1rem;
     box-shadow: 0 2px 8px black;
     border-radius: 1rem;
+    margin: 0;
+    width: 100%;
 }
 .projetos article:hover{
     transform: translateY(-5px);
@@ -134,4 +133,27 @@ body{
     text-align: center;
     color: #c5c6c7;
     font-size: 1.6em;
+}
+@media (max-width: 768px) {
+    .habilidade ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .habilidade ul li img {
+        width: 10rem;
+        height: auto;
+    }
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .left-btn{
+        margin: 1rem 0 2.5rem 1.3rem;
+    }
 }
