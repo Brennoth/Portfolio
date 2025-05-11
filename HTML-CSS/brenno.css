@@ -17,15 +17,22 @@ body{
 
 /*----------HEADER-INICIO---------*/
 .nav{
-    background-color: rgba(0, 0, 0, 0.692);
+    background-color: rgb(0, 0, 0);
     padding: 2rem;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .voltar{
     color: var(--color-ciano);
     text-decoration: none;
     font-size: 1.7em;
     display: inline-block;
+    margin-right: 1rem;
 }
 .voltar:hover{
     color: white;
@@ -55,6 +62,9 @@ body{
 /*----------HEADER-FIM---------*/
 
 /*----------MAIN-INICIO------*/
+.main{
+    margin-top: 10rem;
+}
 .main h1{
     font-size: 4.8em;
     color: var(--color-ciano);
@@ -139,7 +149,7 @@ body{
         gap: 0;
     }
     .list-nav li{
-        margin-right: 2rem;
+        margin-right: 0.8rem;
     }
     .habilidade ul {
         display: flex;
@@ -158,10 +168,7 @@ body{
     }
     .nav{
         display: flex;
-        flex-wrap: wrap;
-    }
-    .left-btn{
-        margin: 1rem 0 2.5rem ;
+        padding-left: 0.8rem;
     }
     .projetos img{
         width: 100%;
