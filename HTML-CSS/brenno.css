@@ -132,6 +132,45 @@ body{
     font-size: 1.8em;
     color: var(--color-ciano);
 }
+fieldset{
+    border: none;
+}
+.form{
+    width: 70%;
+    margin: 0 auto;
+    background-color: #2A424B;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 6rem;
+}
+.form legend{
+    font-size: 3.2rem;
+    color: #45a29e;
+    font-weight: bolder;
+    border-bottom: 2px solid var(--color-ciano);
+    margin-bottom: 1rem;
+}
+.form label{
+    font-size: 1.8rem;
+    color: white;
+}
+.form input,textarea{
+    font-size: 1.8rem;
+}
+.form input[type="submit"]{
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color: #13262D;
+    color: green;
+    border: none;
+}
+.form input[type="submit"]:hover{
+    background-color: green;
+    color: #13262D;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.05);
+}
+
 /*----------MAIN-FIM----------*/
 
 /*---------FOOTER-INICIO---------*/

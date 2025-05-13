@@ -74,18 +74,23 @@
                 responsivas e otimizadas para destacar negócios e profissionais de forma impactante.</p>
 
         </section>
+
+        <form id="zapForm" onsubmit="enviarWhatsApp(); return false;">
+            <div class="form">
+                <fieldset>
+                    <legend>Entrar em Contato</legend>
+                    <label for="nome">Seu nome:</label><br>
+                    <input type="text" id="nome" required><br><br>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" rows="4" required></textarea><br><br>
+                    <input type="submit" value="Enviar para o WhatsApp"></button>
+                </fieldset>
+            </div>
+        </form>
+        
     </main>
 
 
-    <form id="zapForm" onsubmit="enviarWhatsApp(); return false;">
-        <label for="nome">Seu nome:</label><br>
-        <input type="text" id="nome" required><br><br>
-    
-        <label for="mensagem">Mensagem:</label><br>
-        <textarea id="mensagem" rows="4" required></textarea><br><br>
-    
-        <input type="submit">Enviar para o WhatsApp</button>
-    </form>
 
     <footer class="footer">
         <p>Contato: brenno@email.com | Desenvolvido por Brenno © 2025</p>
@@ -97,7 +102,7 @@
             const nome = document.getElementById("nome").value;
             const mensagem = document.getElementById("mensagem").value;
 
-            const numero = "5521980404880"; 
+            const numero = "5521976605420"; 
             const texto = encodeURIComponent(`Olá, me chamo ${nome}. ${mensagem}`);
 
             const link = `https://wa.me/${numero}?text=${texto}`;
