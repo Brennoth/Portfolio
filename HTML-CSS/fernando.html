@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fernando.css">
     <!--FONTE-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,11 @@
 
     <header>
         <nav class="nav">
-            <a href="#" class="voltar">Volta</a>
+            <a href="../index.html" class="voltar">Volta</a>
             <ul class="nav_list">
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#serviços">Serviços</a></li>
             </ul>
         </nav>
 
@@ -31,25 +31,50 @@
     <main class="main">
         <h1>João Fernando Braga Fernandes-Desenvolvedor-Front-End</h1>
         <p>Transformando ideais em páginas incríveis com HTML, CSS e JavaScript</p>
-        <section class="content">
+        <section class="content" id="sobre-mim">
            <h2>Sobre Mim</h2>
            <p>Sou o João Fernando, estudante de Análise e Desenvolvimento de Sistemas. Tenho paixão por tecnologia e desenvolvo landing pages modernas.</p>
         </section>
-        <section class="content">
+        <section class="content" id="habilidades">
             <h2>Habilidades</h2>
             <p>html</p>
             <p>css </p>
         </section>
-        <section class="content">
+        <section class="content" id="serviço">
             <h2>
               Serviços
             </h2>
             <p>Ofereço criação de sites personalizados com HTML e CSS. Desenvolvo páginas modernas, responsivas e otimizadas para destacar negócios e profissionais de forma impactante.</p>
         </section>
+
+        <form id="zapForm" onsubmit="enviarWhatsApp(); return false;">
+            <div class="form">
+                <fieldset>
+                    <legend>Entrar em Contato</legend>
+                    <label for="nome">Seu nome:</label><br>
+                    <input type="text" id="nome" required><br><br>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" rows="4" required></textarea><br><br>
+                    <input type="submit" value="Enviar para o WhatsApp"></button>
+                </fieldset>
+            </div>
+        </form>
     </main>
      <footer class="footer">
         <p>Contato: Joaofernando@email.com | Desenvolvido por Joaofernando © 2025</p>
      </footer>
+     <script>
+        function enviarWhatsApp() {
+            const nome = document.getElementById("nome").value;
+            const mensagem = document.getElementById("mensagem").value;
+
+            const numero = "5521980404880"; 
+            const texto = encodeURIComponent(`Olá, me chamo ${nome}. ${mensagem}`);
+
+            const link = `https://wa.me/${numero}?text=${texto}`;
+            window.open(link, '_blank');
+        }
+    </script>
 </body>
 
 </html>

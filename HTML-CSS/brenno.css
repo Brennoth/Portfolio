@@ -212,4 +212,7 @@ fieldset{
     .projetos img{
         width: 100%;
     }
+    .form{
+        width: 90%;
+    }
 }

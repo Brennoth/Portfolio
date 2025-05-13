@@ -24,6 +24,10 @@ header {
     display: flex;
     gap: 1rem;
     padding: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .voltar {
@@ -51,6 +55,7 @@ header {
 }
 .main{
     padding: 2rem;
+    margin-top: 4rem;
 }
 .main>p {
     text-align: center;
@@ -73,9 +78,61 @@ header {
 .content p{
     color: black;
 }
+fieldset {
+    border: none;
+}
+
+.form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #D0E4FA;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 6rem;
+}
+
+.form legend {
+    font-size: 3.2rem;
+    color: #3179d9;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+.form label {
+    font-size: 1.8rem;
+    color: #1452e3;
+}
+
+.form input,
+textarea {
+    font-size: 1.8rem;
+}
+
+.form input[type="submit"] {
+    padding: 1rem;
+    font-size: 1.8rem;
+    background-color: #9DCCFF;
+    color: green;
+    border: none;
+}
+
+.form input[type="submit"]:hover {
+    background-color: green;
+    color: #9DCCFF;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.05);
+}
 .footer{
     background-color: black;
     padding: 2rem;
     color: white;
-    margin-top: 9rem;
+    
+}
+.footer p{
+    text-align: center;
+}
+@media screen and (max-width: 780px){
+    .content,.form{
+        width: 90%;
+    }
 }
