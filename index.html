@@ -1,57 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Brenno e Fernando</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.scss">
 
-    <!--FONTE-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <!--FONTE-->
+
+    <!--FONTE-ICON-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--FONTE-ICON-->
 </head>
-
 <body>
+
+    <header class="header" id="inicio">
+        <section class="largura-definida header_container">
+
+            <nav class="header_nav color">
+
+                    <div class="header_nav_container">
+                        <div class="header_nav_name">
+                            <h1><a href="index.html">Brenno <span>Thiago</span></a></h1>
+                        </div>
+                        <ul class="header_nav_links">
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#habilidades">Habilidades</a></li>
+                            <li><a href="#projetos">Projetos</a></li>
+                            <li><a href="#contatos">Contatos</a></li>
+                        </ul>
+                    </div>
+
+            </nav>
+
+
+            <div class="header_content">
+                <p>Olá, visitante!👋</p>
+                <p>Meu nome é Brenno</p>
+                <p>Desenvolvedor Full-Stack</p>
+
+                <div class="header_content_links">
+                    <a href="#projetos">Ver Projetos</a>
+                    <a href="Curriculo/Curriculo-Analista de Sistemas.pdf" target="_blank">Download CV</a>
+                </div>
+
+                <div class="header_content_container-icons">
+                    <div class="header_content_container-icons_traço-left"></div>
+                    <div class="header_content_icons">
+                        <a href="https://wa.me/5521976605420" target="_blank"><i class="fa-brands fa-whatsapp fa-lg" aria-hidden="true" style="font-size: 3em; margin-right: 1.5rem;"></i></a>
+                        <a href="https://www.linkedin.com/in/brenno-thiago-b8bb372b3/" target="_blank"><i class="fa-brands fa-github fa-lg" aria-hidden="true" style="font-size: 3em; margin-right: 1.5rem;"></i></a>
+                        <a href="https://github.com/Brennoth" target="_blank"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true" style="font-size: 3em; margin-right: 1.5rem;"></i></a>
+                    </div>
+                    <div class="header_content_container-icons_traço-right"></div>
+                </div>
+
+            </div>
+
+        </section>
+    </header>
+
     <main class="main">
-        <h1>Nosso Portfólio</h1>
-        <p>Conheça os portfólios de Brenno e Fernando e o serviço que oferecemos.</p>
+        <section class="sobreMim" id="sobre">
 
-
-        <section class="alunos">
-            <div class="hero bn">
-                <p><b>Nome:</b> Brenno Thiago Sousa</p>
-                <p><b>Matrícula:</b> 2024100849</p>
-                <p><b>Turma:</b> 947</p>
+            <div class="largura-definida sobreMim_content">
+                <h1>Sobre mim</h1>
+                <p>Me chamo Brenno Thiago, no momento estou graduando no curso de Análise e Desenvolvimento de Sistemas <abbr title="Análise e Desenvolvimento de Sistemas">(ADS)</abbr> pela faculdade UniCarioca e aliado a isto, realizo cursos na Udemy relacionado área de desenvolvimento, e me procuro me tornar profissionalmente um desenvolvedor Full Stack, no momento estou procurando minha primeira experiência profissional que vá agregar na area da tecnologia.</p>
             </div>
-            <div class="hero">
-                <p><b>Nome:</b> João Fernando Braga Fernandes</p>
-                <p><b>Matrícula:</b> 2024101774</p>
-                <p><b>Turma:</b> 947</p>
-            </div>
+            
         </section>
 
+        <section class="habilidades" id="habilidades">
+            <div class="largura-definida habilidades_content">
+                <h1>Habilidades</h1>
 
+              <div class="container">
 
-        <section class="main_content">
-            <div class="card">
-                <h2>Brenno</h2>
-                <p>Front-end Developer. Apaixonado por criar com HTML, CSS, JavaScript e explorar MySQL.</p>
-                <a href="HTML-CSS/brenno.html">Ver Portfólio</a>
+                <div class="habilidades_content_linguagens">
+                    <h2>Front-End</h2>
+                    
+                    <ul class="habilidades_content_linguagens_list">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Icon" width="50">
+                            <p><abbr title="Linguagem de Marcação de Hipertexto">HTML</abbr></p>
+                        </li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css3 Icon" width="50">
+                        <p><abbr title="Folhas de Estilo em Cascata">CSS</abbr></p></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="sass Icon" width="50">
+                        <p><abbr title="olhas de estilo sintaticamente incríveis">SASS</abbr></p></li>
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript Icon" width="50">
+                        <p><abbr title="">JavaScript</abbr></p></li>
+                    </ul>
+
+                </div>
+                
+                <div class="habilidades_content_linguagens">
+                    <h2>Back-End</h2>
+
+                    <ul class="habilidades_content_linguagens_list">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python Icon" width="50">
+                        <p><abbr title="">Python</abbr></p></li>
+
+                    </ul>
+
+                </div>
+
+                <div class="habilidades_content_linguagens">
+                    <h2>Banco de Dados</h2>
+                    <ul class="habilidades_content_linguagens_list">
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="mysql Icon" width="50">
+                        <p><abbr title="Linguagem de Consulta Estruturada">MySQL</abbr></p></li>
+                    </ul>
+                </div>
+
+              </div>
+
             </div>
-            <div class="card">
-                <h2>Fernando</h2>
-                <p>Front-end Developer. Apaixonado por criar layouts modernos com HTML e CSS.</p>
-                <a href="HTML-CSS/fernando.html">Ver Portfólio</a>
-            </div>
+
+            
         </section>
 
+        <section id="projetos" class="projetos">
+            <div class="largura-definida">
+                <h1>Meus Projetos</h1>
+
+                <div class="projetos_container">
+
+                    <div class="projetos_container_content">
+                        <figure class="projetos_container_content_figure">
+                            <a href="https://brennoth.github.io/Cafeteria/" target="_blank"><img src="img/img-projetos/imagem-cafeteria.png" alt="imagem-cafeteria"></a>
+
+                            <!-- <div class="projetos_container_content_figure_icons">
+                                <a href="https://github.com/seuusuario" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+                                <a href="https://seudominio.com" target="_blank" class="icon-link"><i class="fas fa-eye"></i></a>
+                            </div> -->
+                        </figure>
+                        <div class="projetos_container_content_infos">
+                            <h2>Cafeteria</h2>
+                            <p>Landing page criada para uma cafeteria fictícia, com design moderno e foco em apresentação de produtos, ambiente e cardápio.</p>
+                            <div class="projetos_container_content_infos_linguagens">
+                                <p>HTML</p>
+                                <P>CSS</P>
+                                <p>Responsivo</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="projetos_container_content">
+                        <figure class="projetos_container_content_figure">
+                            <a href="https://brennoth.github.io/Cafeteria/" target="_blank"><img src="img/img-projetos/trabalho-algoritmo.png" alt="imagem-trabalhoAlgoritmo"></a>
+
+                            <!-- <div class="projetos_container_content_figure_icons">
+                                <a href="https://github.com/seuusuario" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+                                <a href="https://seudominio.com" target="_blank" class="icon-link"><i class="fas fa-eye"></i></a>
+                            </div> -->
+                        </figure>
+                        <div class="projetos_container_content_infos">
+                            <h2>Cafeteria</h2>
+                            <p>Projeto acadêmico tem como objetivo comparar os preços de uma cesta básica em diferentes supermercados, utilizando JavaScript para facilitar a análise e visualização dos dados</p>
+                            <div class="projetos_container_content_infos_linguagens">
+                                <p>HTML</p>
+                                <P>CSS</P>
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="projetos_container_content">
+                        <figure class="projetos_container_content_figure">
+                            <a href="https://brennoth.github.io/site-android/" target="_blank"><img src="img/img-projetos/site-android.png" alt="imagem-cafeteria"></a>
+
+                            <!-- <div class="projetos_container_content_figure_icons">
+                                <a href="https://github.com/seuusuario" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+                                <a href="https://seudominio.com" target="_blank" class="icon-link"><i class="fas fa-eye"></i></a>
+                            </div> -->
+                        </figure>
+                        <div class="projetos_container_content_infos">
+                            <h2>Site Android</h2>
+                            <p>Site informativo sobre a história do mascote Android, desenvolvido com HTML e CSS, com foco em layout responsivo e organização de conteúdo.</p>
+                            <div class="projetos_container_content_infos_linguagens">
+                                <p>HTML</p>
+                                <P>CSS</P>
+                                <p>Responsivo</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                    
+                    
+
+                </div>
+
+            </div>
+
+        </section>
     </main>
-
-
+    
 </body>
-
 </html>

@@ -1,0 +1,303 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --azul-escuro: #29339B;
+}
+.largura-definida{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+.header{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/pexels-harold-vasquez-853421-2653362.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .header_nav{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    .color{
+        background: linear-gradient(to bottom, #1c1c1c,#1c1c1c,#1c1c1c,#1c1c1c,  rgb(0, 0, 0));
+        max-width: 100%;
+    }
+    .header_nav_container{
+        width: 100%;
+        max-width: 120rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header_nav_name h1{
+        font-size: 3em;
+        color: white;
+    }
+    .header_nav h1 a > span{
+        color: var(--azul-escuro);
+    }
+    .header_nav_links{
+        display: flex;
+        gap: 3rem;
+    }
+    .header_nav_links a{
+        font-size: 1.7em;
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    .header_nav_links a:hover{
+        color: #29339b;
+        transform: scale(1.1);
+        transition: all 0.2s ease-in-out;
+    }
+    .header_container{
+        height: 80vh;
+    }
+    .header_content{
+        color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .header_content p:nth-child(1){
+        font-size: 3em;
+        font-weight: 100;
+        color: rgba(255, 255, 255, 0.8);
+    }
+    .header_content P:nth-child(2){
+        font-size: 4em;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.781);
+    }
+    .header_content p:nth-child(3){
+        font-size: 3em;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 2rem;
+    }
+    .header_content_links{
+        margin-bottom: 6rem;
+    }
+    .header_content_links a:nth-child(1){
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: #444444;
+        font-size: 1.8em;
+        border-radius: 3rem;
+        margin-right: 2rem;
+    }
+    .header_content_links a:nth-child(1):hover{
+        transform: translateY(-2px) scale(1.05) translateZ(0);
+        transition: all 0.4s ease-in-out;
+        box-shadow: 0px 0px 10px 1px white;
+    }
+    .header_content_links a:nth-child(2){
+        display: inline-block;
+        padding: 0.8rem 1.8rem;
+        background-color: transparent;
+        border: 2px solid #ccc;
+        font-size: 1.8em;
+        border-radius: 3rem;
+        color: rgba(255, 255, 255, 0.575);
+    }
+    .header_content_links a:nth-child(2):hover{
+        transform: translateY(-2px) scale(1.05) translateZ(0);
+        transition: all 0.4s ease-in-out;
+        background-color: rgb(167, 167, 167);
+    }
+    .header_content_icons i{
+        color: rgba(255, 255, 255, 0.568);
+    }
+    .header_content_container-icons{
+        display: flex;
+        position: relative;
+    }
+    .header_content_container-icons_traço-left{
+        width: 8rem;
+        height: 0.2rem;
+        background-color: #cccccca4;
+        position: absolute;
+        right: 15rem;
+        top: 0.3rem;
+    }
+    .header_content_container-icons_traço-right {
+        width: 8rem;
+        height: 0.2rem;
+        background-color: #cccccca4;
+        position: absolute;
+        left: 14rem;
+        top: 0.3rem;
+    }
+}
+
+.main{
+    // background: linear-gradient(to top, #1c1c1c,#1c1c1c,#1c1c1c,#1c1c1c,#1c1c1c,#1c1c1c, #030405);
+    background: linear-gradient(to top, #1C1C1C, #2E2E2E,#2E2E2E,#2E2E2E,#2E2E2E, black);
+    .sobreMim{
+        padding: 1rem;
+
+       .sobreMim_content h1{
+        font-size: 3em;
+        color: var(--azul-escuro);
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 2px solid var(--azul-escuro);
+        width: fit-content;
+        margin-top: 4rem;
+       }
+       .sobreMim_content p{
+        color: white;
+        font-size: 1.8em;
+        margin-top: 2rem;
+        letter-spacing: 2px;
+        width: 80%;
+        line-height: 3rem;
+       }
+    }
+    .habilidades{
+        padding: 1rem;
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .habilidades_content h1{
+        font-size: 3em;
+        color: var(--azul-escuro);
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 2px solid var(--azul-escuro);
+        width: fit-content;
+        margin-top: 4rem;
+        }
+        .habilidades_content_linguagens h2{
+            font-size: 2.3em;
+            color: #C1CFDA;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .habilidades_content_linguagens_list{
+            display: flex;
+            gap: 1.5rem;
+
+        }
+        .habilidades_content_linguagens_list li{
+            text-align: center;
+        }
+        .habilidades_content_linguagens_list li img{
+            display: inline;
+        }
+        .habilidades_content_linguagens_list li  abbr{
+            color: white;
+            font-size: 1.8em;
+            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+
+    }
+    .projetos{
+        padding: 1rem;
+        .largura-definida h1{
+        font-size: 3em;
+        color: var(--azul-escuro);
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 2px solid var(--azul-escuro);
+        width: fit-content;
+        margin: 6rem 0 2rem;
+        }
+        .projetos_container{
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .projetos_container_content{
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 calc(100% / 3 - 2rem);
+            background-color: #112229;
+            border-radius: 2rem;
+        }
+        .projetos_container_content:hover{
+            transform: translateY(-5px) scale(1.01);
+            transition: all 0.2s ease-in;
+        }
+        .projetos_container_content:hover{
+            box-shadow: 0 0 10px 1px white;
+            transition: box-shadow 0.4s ease-in;
+        }
+        // .projetos_container_content_figure{
+        //     position: relative;
+        // }
+        // .projetos_container_content_figure_icons{
+        //     position: absolute;
+        //     top: 50%;
+        //     right: 50%;
+        //     display: none;
+        // }
+        // .projetos_container_content_figure:hover{
+            
+        //     .projetos_container_content_figure_icons{
+        //         display: block;
+        //         color: white;
+        //         font-size: 2em;
+        //     }
+        // }
+        .projetos_container_content img{
+            width: 100%;
+            border-radius: 2rem 2rem 0 0;
+            max-height: 17rem;
+        }
+        .projetos_container_content_infos{
+            padding: 2rem;
+        }
+        .projetos_container_content_infos h2{
+            font-size: 2.3em;
+            color: white;
+            font-weight: bold;
+        }
+        .projetos_container_content_infos > p{
+            font-size: 1.6em;
+            color: rgba(255, 255, 255, 0.603);
+            margin: 2rem 0;
+        }
+        .projetos_container_content_infos_linguagens{
+            display: flex;
+            gap: 2rem;
+        }
+        .projetos_container_content_infos_linguagens > p{
+            font-size: 1.4em;
+            color: rgba(255, 255, 255, 0.815);
+            background-color: #2A424B;
+            padding: 1rem 1.5rem;
+            border-radius: 2rem;
+        }
+    }
+}
+
+
