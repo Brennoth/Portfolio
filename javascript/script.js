@@ -1,1 +1,1 @@
-alert("Portfólio em desenvolvimento, atualizações em andamento.")
+// alert("Portfólio em desenvolvimento, atualizações em andamento.")

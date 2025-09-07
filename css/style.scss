@@ -37,6 +37,7 @@ body{
         max-width: 100%;
         margin: 0 auto;
         padding: 1rem;
+        z-index: 99;
     }
     .color{
         background: linear-gradient(to bottom, #1c1c1c,#1c1c1c,#1c1c1c,#1c1c1c,  rgb(0, 0, 0));
@@ -242,14 +243,14 @@ body{
             flex: 1 1 calc(100% / 3 - 2rem);
             background-color: #112229;
             border-radius: 2rem;
+            transition: transform 0.5s, box-shadow 0.4s ease-in;
         }
         .projetos_container_content:hover{
-            transform: translateY(-5px) scale(1.01);
-            transition: all 0.2s ease-in;
+            transform: translateY(-10px) scale(1.01);
+            
         }
         .projetos_container_content:hover{
             box-shadow: 0 0 10px 1px white;
-            transition: box-shadow 0.4s ease-in;
         }
         // .projetos_container_content_figure{
         //     position: relative;
@@ -297,6 +298,89 @@ body{
             padding: 1rem 1.5rem;
             border-radius: 2rem;
         }
+    }
+    .certificados{
+        .certificados_container{
+            padding: 1rem;
+        }
+        .certificados_container h1{
+        font-size: 3em;
+        color: var(--azul-escuro);
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 2px solid var(--azul-escuro);
+        width: fit-content;
+        margin-top: 4rem;
+        }
+        .certificados_container_certificados{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .certificados_container_certificados_content{
+            background-color: rgb(211, 211, 211);
+            flex: 1 1 calc(100% / 3 - 2rem);
+            padding: 2rem;
+            border-radius: 2rem;
+            transition: transform 0.5s, box-shadow 0.4s ease-in;
+            margin-bottom: 4rem;
+        }
+        .certificados_container_certificados_content:hover{
+            box-shadow: 2px 2px 10px 6px black;
+        }
+        .certificados_container_certificados_content:hover{
+            transform: translateY(-4px);
+
+        }
+        .certificados_container_certificados_content h2{
+            font-size: 2.3em;
+            text-align: center;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        .certificados_container_certificados_content p:nth-child(2){
+            font-size: 1.8em;
+            font-weight: 600;
+            text-align: center;
+        }
+        .certificados_container_certificados_content p:nth-child(3){
+            font-size: 1.6em;
+            color: #4d4b4b;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .certificados_container_certificados_content a{
+            background-color: #0077B6;
+            display: block;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            font-size: 1.6em;
+            margin: 0 auto;
+            width: fit-content;
+            color: white;
+            transition: transform 0.3s ease-in;
+        }
+        .certificados_container_certificados_content a:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+.footer{
+    background: linear-gradient(180deg, #1a1a1a, black);
+    padding: 4rem;
+    text-align: center;
+    .footer_container{
+        padding: 1rem;
+    }
+    .footer_container p{
+        font-size: 1.6em;
+        color: white;
+        margin-bottom: 1rem;
+    }
+    .footer_container_icons{
+        margin-top: 2.5rem;
     }
 }
 
