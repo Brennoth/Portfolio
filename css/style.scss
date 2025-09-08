@@ -6,9 +6,11 @@
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
+    height: 100%;
 }
 body{
-    min-height: 100vh;
+
+    height: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 :root{
@@ -50,6 +52,9 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    .header_nav_container input, .header_nav_container label{
+        display: none;
     }
     .header_nav_name h1{
         font-size: 3em;
@@ -384,4 +389,105 @@ body{
     }
 }
 
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .header{
+        background-position: right;
+    }
+}
+@media screen and (max-width:767px) {
+    /*hamburgue-menu*/
+    .header_nav_container .mobile input, .header_nav_container .mobile label{
+        display: block;
+    }
+    .menu-icon{
+        position: relative;
+        cursor: pointer;
+        height: 2rem;
+        // user-select: none;
+    }
+    .nav-icon{
+        background-color: black;
+        display: inline-block;
+        height: 2px;
+        width: 24px;
+        position: relative;
+        
+    }
+    .nav-icon::after, .nav-icon::before{
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+    }
+    .nav-icon::after{
+        transform: translateY(8px);
+        transition: all 0.3s ease-in-out;
+    }
+    .menu-btn:checked + .menu-icon .nav-icon::after{
+        transform: rotate(45deg);
+    }
+    .nav-icon::before{
+        transform: translateY(-8px);
+        transition: all 0.3s ease-in-out;
+    }
+    .menu-btn:checked + .menu-icon .nav-icon::before{
+        transform: rotate(-45deg);
+    }
+    .menu-btn:checked + .menu-icon .nav-icon{
+        background-color: transparent;
+    }
+    .header_nav_links{
+        flex-direction: column;
+    }
+    .mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .header_nav_links{
+        position: absolute;
+        background-color: #ccc;
+        left: 0;
+        right: 0;
+        top: 6rem;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .menu-btn:checked ~ .header_nav_links{
+        max-height: 100vh;
+    }
+    .header .header_nav_links{
+        text-align: right;
+        gap: 0;
+    }
+    .header_nav_links a{
+        width: 100%;
+        padding: 2rem;
+    }
+    .header_nav_links a:hover{
+        transform: none !important;
+        color: white !important;
+        background-color: #29339b96;
+    }
+    .menu-btn{
+        clip-path: inset(100%);
+        position: absolute;
+        height: 1px;
+        width: 1px;
+    }
+    /*FIM-HAMBURGUER*/
+    .header{
+        background-position: right;
+    }
+    .header_content{
+        justify-content: end !important;
+    }
+    .main .habilidades .container{
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
 
