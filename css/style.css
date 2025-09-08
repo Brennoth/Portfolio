@@ -387,7 +387,7 @@ body {
     height: 2rem;
   }
   .nav-icon {
-    background-color: black;
+    background-color: var(--azul-escuro);
     display: inline-block;
     height: 2px;
     width: 24px;
@@ -398,7 +398,7 @@ body {
     display: inline-block;
     width: 24px;
     height: 2px;
-    background-color: black;
+    background-color: var(--azul-escuro);
     position: absolute;
   }
   .nav-icon::after {
