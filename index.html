@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,14 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style.scss">
-
+ 
+    <!--FONTE LETRA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!--FONTE LETRA-->
 
     <!--FONTE-ICON-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,308 +23,54 @@
     <!--FONTE-ICON-->
 
     <!--FONTE-ICON-CERTIFICADO-->
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!--FONTE-ICON-CERTIFICADO-->
 </head>
+
 <body>
 
-    <header class="header" id="inicio">
-        <section class="largura-definida header_container">
+    <header class="header">
 
-            <nav class="header_nav color">
-
-                    <div class="header_nav_container">
-                        <div class="header_nav_name">
-                            <h1><a href="index.html">Brenno <span>Thiago</span></a></h1>
-                        </div>
-
-                        <div class="mobile">
-                            <input type="checkbox" class="menu-btn" id="menu-btn">
-                            <label for="menu-btn" class="menu-icon"><span class="nav-icon"></span></label>
-                            <ul class="header_nav_links">
-                                <li><a href="#inicio">Inicio</a></li>
-                                <li><a href="#sobre">Sobre</a></li>
-                                <li><a href="#habilidades">Habilidades</a></li>
-                                <li><a href="#projetos">Projetos</a></li>
-                                <li><a href="#certificados">Certificados</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-            </nav>
-
-            <div class="header_content">
-                <p>Olá, visitante!👋</p>
-                <p>Meu nome é Brenno</p>
-                <p>Desenvolvedor Full-Stack em formação</p>
-
-                <div class="header_content_links">
-                    <a href="#projetos">Ver Projetos</a>
-                    <a href="assets/Curriculo/Curriculo-Analista de Sistema.pdf" target="_blank">Download CV</a>
-                </div>
-
-                <div class="header_content_container-icons">
-                    <div class="header_content_container-icons_traço-left"></div>
-                    <div class="header_content_icons">
-                        <a href="https://wa.me/5521976605420" target="_blank"><i class="fa-brands fa-whatsapp fa-lg" aria-hidden="true" style="font-size: 3.3em; margin-right: 1.5rem; color: #4ADE80;"></i></a>
-                        <a href="https://github.com/Brennoth" target="_blank"><i class="fa-brands fa-github fa-lg" aria-hidden="true" style="font-size: 3.3em; margin-right: 1.5rem; color: #D1D5DB;"></i></a>
-                        <a href="https://www.linkedin.com/in/brenno-thiago-b8bb372b3/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true" style="font-size: 3.3em; margin-right: 1.5rem; color: #60A5FA;"></i></a>
-                    </div>
-                    <div class="header_content_container-icons_traço-right"></div>
-                    <div class="header_content_container-icons_traço-baixo"> > > > </div>
-                </div>
-
+        <div class="header_container">
+            <div class="header_conainer_name">
+                <h1 class="name">Brenno <span>Thiago</span></h1>
             </div>
-        </section>
+
+            <div id="menu">
+                <div id="menu-bar" onclick="menuOnClick()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bg" id="menu-bg"></div>
+        </div>
+
     </header>
 
-    <main class="main">
-        <section class="sobreMim" id="sobre">
-
-            <div class="largura-definida sobreMim_content">
-                <h1>Sobre mim</h1>
-                <p>Me chamo Brenno Thiago, no momento estou graduando no curso de <span class="faculdade">Análise e Desenvolvimento de Sistemas <abbr title="Análise e Desenvolvimento de Sistemas">(ADS)</abbr></span> pela faculdade UniCarioca e aliado a isto, realizo cursos na Udemy relacionado área de desenvolvimento, e me procuro me tornar profissionalmente um desenvolvedor Full Stack, no momento estou procurando minha primeira experiência profissional que vá agregar na area da tecnologia.</p>
-            </div>
-            
-        </section>
-
-        <section class="habilidades" id="habilidades">
-            <div class="largura-definida habilidades_content">
-                <h1>Habilidades</h1>
-
-              <div class="container">
-
-                <div class="habilidades_content_linguagens">
-                    <h2>Front-End</h2>
-                    
-                    <ul class="habilidades_content_linguagens_list">
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Icon" width="50">
-                            <div class="habilidades_content_linguagens_list_text-img">
-                                <p><abbr title="Linguagem de Marcação de Hipertexto">HTML</abbr></p>
-                                <p>Linguagem de Marcação de Hipertexto</p>
-                            </div>
-                            
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css3 Icon" width="50">
-                            <div class="habilidades_content_linguagens_list_text-img">
-                                <p><abbr title="Folhas de Estilo em Cascata">CSS</abbr></p>
-                                <p>Folhas de Estilo em Cascata</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="sass Icon" width="50">
-                            <div class="habilidades_content_linguagens_list_text-img">
-                                <p><abbr title="Folhas de Estilo em Cascata">SASS</abbr></p>
-                                <p>Folhas de estilo sintaticamente incríveis</p>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript Icon" width="50">
-                            <div class="habilidades_content_linguagens_list_text-img">
-                                <p><abbr title="">JavaScript</abbr></p>
-                                <p>Linguagem de programação</p>
-                            </div>
-                        
-
-                        </li>
-                    </ul>
-
-                </div>
-                
-                <div class="habilidades_content_linguagens">
-                    <h2>Back-End</h2>
-
-                    <ul class="habilidades_content_linguagens_list">
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python Icon" width="50">
-                            <div class="habilidades_content_linguagens_list_text-img">
-                                <p><abbr title="">Python</abbr></p>
-                                <p>Linguagem de programação</p>
-                            </div>
-                        
-                    </li>
-
-                    </ul>
-
-                </div>
-
-                <div class="habilidades_content_linguagens">
-                    <h2>Banco de Dados</h2>
-                    <ul class="habilidades_content_linguagens_list">
-                        <li>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="mysql Icon" width="50">
-                            <div class="habilidades_content_linguagens_list_text-img">
-                                <p><abbr title="Linguagem de Consulta Estruturada">MySQL</abbr></p>
-                                <p>Linguagem de Consulta Estruturada</p>
-                            </div>
-                        
-                        </li>
-                    </ul>
-                </div>
-
-              </div>
+    <main>
+        <section class="home">
+            <div>
 
             </div>
-
-            
         </section>
-
-        <section id="projetos" class="projetos">
-            <div class="largura-definida">
-                <h1>Meus Projetos</h1>
-
-                <div class="projetos_container">
-
-                    <div class="projetos_container_content">
-                        <figure class="projetos_container_content_figure">
-                            <img src="assets/img/img-projetos/img-previsãoDoTempo.jpg" alt="imagem-cafeteria">
-                        </figure>
-                        <div class="projetos_container_content_infos">
-                            <h2>Site previsão do tempo</h2>
-                            <p>Aplicação web desenvolvida para exibir a previsão do tempo atual, utilizando uma API meteorológica externa. O projeto demonstra conhecimentos em consumo de APIs, requisições assíncronas (fetch/async-await), manipulação do DOM e organização de dados dinâmicos no front-end.</p>
-                            <div class="projetos_container_content_infos_linguagens">
-                                <p>HTML</p>
-                                <P>CSS</P>
-                                <p>Responsivo</p>
-                                <p>API REST</p>
-                                <p>Fetch API</p>
-                            </div>
-                            <div class="projetos_container_content_infos_links">
-                                <a href="https://brennoth.github.io/Previsao-do-Tempo/" target="_blank">Ver Projeto<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#">Git hub<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="projetos_container_content">
-                        <figure class="projetos_container_content_figure">
-                            <img src="assets/img/img-projetos/imagem-cafeteria.png" alt="imagem-cafeteria">
-                        </figure>
-                        <div class="projetos_container_content_infos">
-                            <h2>Cafeteria</h2>
-                            <p>Landing page criada para uma cafeteria fictícia, com design moderno e foco em apresentação de produtos, ambiente e cardápio.</p>
-                            <div class="projetos_container_content_infos_linguagens">
-                                <p>HTML</p>
-                                <P>CSS</P>
-                                <p>Responsivo</p>
-                            </div>
-                            <div class="projetos_container_content_infos_links">
-                                <a href="https://brennoth.github.io/Cafeteria/" target="_blank">Ver Projeto<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#">Git hub<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="projetos_container_content">
-                        <figure class="projetos_container_content_figure">
-                            
-                            <img src="assets/img/img-projetos/trabalho-algoritmo.png" alt="imagem-trabalhoAlgoritmo">
-                            
-
-                            <!-- <div class="projetos_container_content_figure_icons">
-                                <a href="https://github.com/seuusuario" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
-                                <a href="https://seudominio.com" target="_blank" class="icon-link"><i class="fas fa-eye"></i></a>
-                            </div> -->
-                        </figure>
-                        <div class="projetos_container_content_infos">
-                            <h2>Comparação de preços</h2>
-                            <p>Projeto acadêmico tem como objetivo comparar os preços de uma cesta básica em diferentes supermercados, utilizando JavaScript para facilitar a análise e visualização dos dados</p>
-                            <div class="projetos_container_content_infos_linguagens">
-                                <p>HTML</p>
-                                <P>CSS</P>
-                                <p>JavaScript</p>
-                            </div>
-                            <div class="projetos_container_content_infos_links">
-                                <a href="https://brennoth.github.io/Trabalho-Algoritimo/" target="_blank">Ver Projeto<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#">Git hub<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="projetos_container_content">
-                        <figure class="projetos_container_content_figure">
-                            
-                            <img src="assets/img/img-projetos/site-android.png" alt="imagem-cafeteria">
-                            
-
-                            <!-- <div class="projetos_container_content_figure_icons">
-                                <a href="https://github.com/seuusuario" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
-                                <a href="https://seudominio.com" target="_blank" class="icon-link"><i class="fas fa-eye"></i></a>
-                            </div> -->
-                        </figure>
-                        <div class="projetos_container_content_infos">
-                            <h2>Site Android</h2>
-                            <p>Site informativo sobre a história do mascote Android, desenvolvido com HTML e CSS, com foco em layout responsivo e organização de conteúdo.</p>
-                            <div class="projetos_container_content_infos_linguagens">
-                                <p>HTML</p>
-                                <P>CSS</P>
-                                <p>Responsivo</p>
-                            </div>
-                            <div class="projetos_container_content_infos_links">
-                                <a href="https://brennoth.github.io/site-android/" target="_blank">Ver Projeto<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                <a href="#">Git hub<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    
-
-                    
-
-                </div>
-
-            </div>
-
-        </section>
-        
-        <section id="certificados" class="certificados">
-
-            <div class="largura-definida certificados_container">
-                <h1>Certificados</h1>
-
-                <div class="certificados_container_certificados">
-
-                    <div class="certificados_container_certificados_content">
-                        <div class="certificados_container_certificados_content_icon"><i class="fa-solid fa-certificate"></i></div>
-                        <h2>Certificado Frond-End</h2>
-                        <p>HTML, CSS e JavaScript</p>
-                        <p>Curso Udemy - 112,5h</p>
-                        <a href="assets/certificados/html-css.pdf" target="_blank">Ver certificado <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-
-                    
-
-                </div>
-
-            </div>
-
-        </section>
-
     </main>
 
 
-    <footer class="footer">
-        <div class="largura-definida footer_container">
-            <p>© 2025 Brenno Thiago. Todos os direitos reservados.</p>
-            <p>Siga-me nas redes sociais</p>
-            <div class="footer_container_icons">
-                    <a href="https://wa.me/5521976605420" target="_blank"><i class="fa-brands fa-whatsapp fa-lg" aria-hidden="true" style="font-size: 4em; margin-right: 1.5rem; color: #2BD46A;"></i></a>
-                    <a href="https://github.com/Brennoth" target="_blank"><i class="fa-brands fa-github fa-lg" aria-hidden="true" style="font-size: 4em; margin-right: 1.5rem; color: white;"></i></a>
-                    <a href="https://www.linkedin.com/in/brenno-thiago-b8bb372b3/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true" style="font-size: 4em; margin-right: 1.5rem; color: #116AC3;"></i></a>
-            </div>
-        </div>
-    </footer>
+
+
+
 
     <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/hamburguerMenu.js"></script>
 </body>
+
 </html>
