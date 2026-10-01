@@ -1004,7 +1004,36 @@ footer {
 
 
 
+@media (min-width: 768px) {
+    
+}
 
+//Desktop
+@media (min-width: 1280px) {
+    header{
+        #menu-bar{
+            display: none;
+        }
+        .nav{
+            display: block !important;
+        }
+        ul{
+            display: flex;
+            gap: 2rem;
+        }
+        .header_container{
+            align-items: center;
+        }
+        #menu{
+            position: static !important;
+        }
+        ul > li a:hover{
+            transform: scale(1.1) !important;
+            font-weight: normal !important;
+        }
+
+    }
+}
 
 
 

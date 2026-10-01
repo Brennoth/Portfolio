@@ -867,6 +867,28 @@ footer .footer_links a:nth-child(3):hover {
   filter: drop-shadow(0 4px 12px rgba(56, 189, 248, 0.4));
 }
 
+@media (min-width: 1280px) {
+  header #menu-bar {
+    display: none;
+  }
+  header .nav {
+    display: block !important;
+  }
+  header ul {
+    display: flex;
+    gap: 2rem;
+  }
+  header .header_container {
+    align-items: center;
+  }
+  header #menu {
+    position: static !important;
+  }
+  header ul > li a:hover {
+    transform: scale(1.1) !important;
+    font-weight: normal !important;
+  }
+}
 @media (min-width: 48em) {
   .header__title {
     font-size: 4.6rem;
