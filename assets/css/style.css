@@ -840,6 +840,7 @@ footer .footer_links {
 }
 footer .footer_links a {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
 }
 footer .footer_links a:nth-child(1) {
   color: #22c55e;
@@ -867,90 +868,86 @@ footer .footer_links a:nth-child(3):hover {
   filter: drop-shadow(0 4px 12px rgba(56, 189, 248, 0.4));
 }
 
-@media (min-width: 1280px) {
-  header #menu-bar {
-    display: none;
+#sobre, #habilidades, #projetos {
+  scroll-margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  main .projetos .projetos_containers .projetos_containers_content img {
+    border-radius: 2rem 2rem 0 0;
+    border-bottom: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    flex: 1;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  header .nav {
-    display: block !important;
-  }
-  header ul {
+  main .projetos .projetos_containers .projetos_containers_content .projetos_containers_content_texts {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .habilidades .habilidades_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  header .header_container {
+  main .habilidades .habilidades_container .habilidades_container_linguagens {
+    margin-top: 0;
+  }
+  main .contatos .contatos_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .header #menu-bar {
+    display: none;
+  }
+  .header .nav {
+    display: block !important;
+  }
+  .header ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+  .header .header_container {
     align-items: center;
   }
-  header #menu {
+  .header #menu {
     position: static !important;
   }
-  header ul > li a:hover {
+  .header ul > li a:hover {
     transform: scale(1.1) !important;
     font-weight: normal !important;
   }
-}
-@media (min-width: 48em) {
-  .header__title {
-    font-size: 4.6rem;
-  }
-  .header__info-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .header__actions {
-    flex-direction: row;
+  main .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
     align-items: center;
-    gap: 1.6rem;
   }
-  .header__link-comigo {
-    padding: 0;
-    margin-left: 0.8rem;
+  main .home .home_infos {
+    margin: 0;
   }
-}
-/* ----------------------------------------------------
-   MEDIA QUERY: DESKTOP (a partir de 64em / 1024px)
----------------------------------------------------- */
-@media (min-width: 64em) {
-  .header__menu-btn {
-    display: none;
-  }
-  .header__nav {
-    display: block;
-  }
-  .header__menu {
-    list-style: none;
+  main .projetos_caixas {
     display: flex;
-    align-items: center;
-    gap: 3.2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
-  .header__link {
-    font-size: 1.35rem;
-    color: #94a3b8;
-    text-decoration: none;
-    transition: color 0.2s ease;
+  main .projetos_caixas .projetos_containers {
+    flex: 1 1 calc(33.3333333333% - 2rem);
   }
-  .header__link:hover {
-    color: #ffffff;
+  main .habilidades .habilidades_container {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .header__link--especial {
-    color: #ffffff;
-    font-weight: 500;
+  main .contatos .contatos_container {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .header {
-    /* Layout exato do Desktop: Conteúdo à esquerda e Card à direita */
+  footer {
+    text-align: center;
   }
-  .header__hero {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 6rem;
-    margin-top: 4rem;
-  }
-  .header__content {
-    flex: 1;
-    max-width: 66rem;
-  }
-  .header__card {
-    width: 42rem;
-    flex-shrink: 0;
+  footer .footer_links {
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */

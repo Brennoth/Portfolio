@@ -967,6 +967,7 @@ footer {
 
         a {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-block;
         }
 
         a:nth-child(1) {
@@ -1001,552 +1002,129 @@ footer {
         }
     }
 }
+#sobre, #habilidades, #projetos{
+    scroll-margin-top: 4rem;
 
-
-
-@media (min-width: 768px) {
-    
 }
 
-//Desktop
-@media (min-width: 1280px) {
-    header{
-        #menu-bar{
-            display: none;
+// ==========================================
+// RESPONSIVIDADE: TABLET (A partir de 768px)
+// ==========================================
+@media (min-width: 768px) {
+    main {
+        // 1. Projetos: Coloca a imagem na esquerda e o texto na direita
+        .projetos {
+            .projetos_containers {
+                .projetos_containers_content {
+                    
+
+                    img {
+                        border-radius: 2rem 2rem 0 0; // Arredonda só os cantos da esquerda
+                        border-bottom: none;
+                        border-right: 1px solid rgba(255, 255, 255, 0.05);
+                        flex: 1;
+                        object-fit: cover; // Evita que a imagem distorça
+                    }
+
+                    .projetos_containers_content_texts {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center; // Centraliza o texto verticalmente
+                    }
+                }
+            }
         }
-        .nav{
-            display: block !important;
+
+        // 2. Habilidades: Usa CSS Grid para dividir em 2 colunas
+        .habilidades {
+            .habilidades_container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+
+                .habilidades_container_linguagens {
+                    margin-top: 0; // Remove a margem do mobile, pois o Grid já usa o 'gap'
+                }
+            }
         }
-        ul{
+
+        // 3. Contatos: Usa CSS Grid para dividir em 2 colunas
+        .contatos {
+            .contatos_container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+// ===========================================
+// RESPONSIVIDADE: DESKTOP (A partir de 1024px)
+// ===========================================
+@media (min-width: 1024px) {
+    
+    // 4. Menu Desktop (Adaptado do seu código original)
+    .header { // Corrigido de 'header' para '.header'
+        #menu-bar {
+            display: none; // Oculta o ícone hamburguer
+        }
+        .nav {
+            display: block !important; // Exibe a barra de navegação
+        }
+        ul {
             display: flex;
             gap: 2rem;
+            margin: 0; 
         }
-        .header_container{
+        .header_container {
             align-items: center;
         }
-        #menu{
-            position: static !important;
+        #menu {
+            position: static !important; // Tira o menu do modo flutuante
         }
-        ul > li a:hover{
+        ul > li a:hover {
             transform: scale(1.1) !important;
             font-weight: normal !important;
         }
-
     }
-}
 
-
-
-
-
-
-
-
-
-
-
-
-// .main{
-
-//     .sobreMim{
-//         padding: 10rem;
-//         background-color: #1F2937;
-//         text-align: center;
-
-//        .sobreMim_content h1{
-//         font-size: 4em;
-//         color: #9394FB;
-//         text-transform: uppercase;
-//         font-weight: bold;
-//        }
-//        .faculdade{
-//         color: #60A5FA;
-//        }
-//        .sobreMim_content p{
-//         color: var(--color-text-cinza-claro);
-//         font-size: 1.8em;
-//         margin-top: 2rem;
-//         letter-spacing: 2px;
-//         line-height: 3rem;
-//        }
-//     }
-//     .habilidades{
-//         padding: 4rem;
-//         background-color: #111827;
-//         .container{
-//             display: flex;
-//             gap: 2rem;
-//             justify-content: space-between;
-//         }
-//         .habilidades_content h1{
-//         font-size: 3em;
-//         color: var(--color-text-h1);
-//         text-transform: uppercase;
-//         font-weight: bold;
-//         text-align: center;
-//         margin-bottom: 4rem;
-//         }
-//         .habilidades_content_linguagens{
-//             background-color: #1F2937;
-//             padding: 4rem;
-//             border-radius: 2rem;
-//             border: 2px solid rgba(255, 255, 255, 0.13);
-//             transition: all 0.2s ease-in-out;
-//         }
-//         .habilidades_content_linguagens:hover{
-//             border: 2px solid rgba(0, 174, 255, 0.452);
-//         }
-//         .habilidades_content_linguagens h2{
-//             font-size: 2.3em;
-//             color: #C1CFDA;
-//             font-weight: bold;
-//         }
-//         .habilidades_content_linguagens_list_text-img{
-//             text-align: left;
-//         }
-//         .habilidades_content_linguagens_list_text-img p:nth-child(2){
-//             color: #d1d5db81;
-//             font-size: 1.4em;
-//         }
-
-//         .habilidades_content_linguagens_list li:hover{
-//             background-color: rgba(128, 128, 128, 0.247);
-//         }
-//         .habilidades_content_linguagens_list li{
-//             display: flex;
-//             text-align: center;
-//             padding: 1.5rem;
-//             margin-bottom: 2rem;
-//             border-radius: 1rem;
-//             transition: all 0.2s ease-in-out;
-//         }
-//         .habilidades_content_linguagens_list li img{
-//             display: inline;
-//             margin-right: 2rem;
-//         }
-//         .habilidades_content_linguagens_list li  abbr{
-//             color: white;
-//             font-size: 1.8em;
-//             text-decoration: none;
-//             margin-top: 0.5rem;
-//         }
-
-//     }
-//     .projetos{
-//         background-color: #1F2937;
-//         padding: 3rem;
-//         .largura-definida h1{
-//         font-size: 3em;
-//         color: var(--color-text-h1);
-//         text-transform: uppercase;
-//         font-weight: bold;
-//         margin-bottom: 2rem;
-//         text-align: center;
-//         }
-//         .projetos_container{
-//             display: flex;
-//             gap: 2rem;
-//             flex-wrap: wrap;
-//         }
-//         .projetos_container_content{
-//             display: flex;
-//             flex-direction: column;
-//             flex: 1 1 calc(100% / 3 - 2rem);
-//             background-color: #111827;
-//             border-radius: 2rem;
-//             transition: all 0.3s ease-in-out;
-//             overflow: hidden;
-//             outline: 1px solid rgba(255, 255, 255, 0.151);
-//         }
-//         .projetos_container_content:hover h2 {
-//             color: #60A5FA;
-//         }
-//         .projetos_container_content:hover img {
-//             transform: scale(1.08);
-
-//         }
-
-//         .projetos_container_content:hover{
-//             outline: 2px solid rgba(0, 174, 255, 0.452);
-//             color: #60A5FA;
-//         }
-//         .projetos_container_content img {
-//             width: 100%;
-//             max-height: 17rem;
-//             object-fit: cover;
-//             border-radius: 2rem 2rem 0 0;
-//             transition: all 0.4s ease-in-out;
-//         }
-//         .projetos_container_content_infos{
-//             padding: 2rem 2rem 4rem;
-//         }
-//         .projetos_container_content_infos_links > a{
-//             color: #60A5FA;
-//             font-size: 1.6em;
-//             display: inline-block;
-//             margin-top: 2rem;
-//             text-transform: capitalize;
-//             margin-right: 6rem;
-//         }
-//         .projetos_container_content_infos_links > a:hover{
-//             color: #93c3fd;
-//         }
-//         .projetos_container_content_infos_links > a > i{
-//             margin-left: 0.5rem;
-//         }
-//         .projetos_container_content_infos h2{
-//             font-size: 2.3em;
-//             color: white;
-//             font-weight: bold;
-//             transition: all 0.3s ease-in-out;
-//         }
-//         .projetos_container_content_infos > p{
-//             font-size: 1.6em;
-//             color: rgba(255, 255, 255, 0.603);
-//             margin: 2rem 0;
-//         }
-//         .projetos_container_content_infos_linguagens{
-//             display: flex;
-//             gap: 2rem;
-//             flex-wrap: wrap;
-//         }
-//         .projetos_container_content_infos_linguagens > p{
-//             font-size: 1.4em;
-//             color: #56A5FA;
-//             background-color: #15274E;
-//             padding: 1rem 1.5rem;
-//             border-radius: 2rem;
-//         }
-//     }
-//     .certificados{
-//         background-color: #111827;
-//         padding: 4rem;
-//         .certificados_container h1{
-//         font-size: 3em;
-//         color: var(--color-text-h1);
-//         text-transform: uppercase;
-//         font-weight: bold;
-//         border-bottom: 2px solid var(--azul-escuro);
-//         text-align: center;
-//         }
-//         .certificados_container_certificados{
-//             display: flex;
-//             flex-wrap: wrap;
-//             gap: 2rem;
-//             margin-top: 2rem;
-//         }
-//         .certificados_container_certificados_content{
-//             background-color: #1F2937;
-//             padding: 2rem;
-//             border-radius: 2rem;
-//             transition: all 0.2s ease-in;
-//             outline: 1px solid rgba(255, 255, 255, 0.151);
-//         }
-//         .certificados_container_certificados_content:hover{
-//             outline: 2px solid rgba(0, 174, 255, 0.452);
-//         }
-//         .certificados_container_certificados_content:hover h2{
-//             color: #60A4F9;
-//         }
-//         .certificados_container_certificados_content_icon{
-//             background-color: #20355B;
-//             width: fit-content;
-//             padding: 1.8rem 2rem;
-//             margin: 0 auto;
-//             border-radius: 50%;
-//         }
-//         .certificados_container_certificados_content_icon i{
-//             font-size: 2em;
-//             color: #60A4F9;
-//         }
-//         .certificados_container_certificados_content h2{
-//             font-size: 2.3em;
-//             text-align: center;
-//             font-weight: bold;
-//             margin-bottom: 1rem;
-//             color: white;
-//             transition: all 0.2s ease-in;
-//         }
-
-//         .certificados_container_certificados_content p:nth-child(3){
-//             font-size: 1.6em;
-//             color: #60A5FA;
-//             text-align: center;
-//             margin: 1rem 0;
-//         }
-//         .certificados_container_certificados_content p:nth-child(4){
-//             font-size: 1.4em;
-//             text-align: center;
-//             color: rgba(255, 255, 255, 0.603);
-//             margin-bottom: 1rem
-//         }
-//         .certificados_container_certificados_content a{
-//             background-color: #0077B6;
-//             display: block;
-//             padding: 1rem 2rem;
-//             border-radius: 2rem;
-//             font-size: 1.6em;
-//             margin: 0 auto;
-//             width: fit-content;
-//             color: white;
-//             transition: all 0.3s ease-in;
-//         }
-//         .certificados_container_certificados_content a > i{
-//             margin-right: 1rem;
-//         }
-//         .certificados_container_certificados_content a:hover{
-//             transform: scale(1.1);
-//             background-color: #08405e;
-//         }
-//     }
-// }
-
-// .footer{
-//     background-color: #1F2937;
-//     padding: 4rem;
-//     text-align: center;
-//     .footer_container{
-//         padding: 1rem;
-//     }
-//     .footer_container p{
-//         font-size: 1.6em;
-//         color: white;
-//         margin-bottom: 1rem;
-//     }
-//     .footer_container_icons{
-//         margin-top: 2.5rem;
-//     }
-// }
-
-
-// @media screen and (min-width: 768px) and (max-width: 1199px) {
-
-//     .habilidades_content_linguagens_list li img{
-//         margin: 0 !important;
-//     }
-//     .habilidades_content_linguagens_list_text-img{
-//         text-align: center !important;
-//     }
-//     .habilidades_content_linguagens_list li{
-//         display: block !important;
-//     }
-//     .projetos_container_content{
-//         flex: 1 1 calc(100% / 2 - 2rem) !important;
-//     }
-// }
-// @media screen and (max-width:767px) {
-//     /*hamburgue-menu*/
-//     .menu-icon{
-//         position: relative;
-//         cursor: pointer;
-//         height: 2rem;
-//         // user-select: none;
-//     }
-//     .nav-icon{
-//         background-color: white;
-//         display: inline-block;
-//         height: 2px;
-//         width: 24px;
-//         position: relative;
-
-//     }
-//     .nav-icon::after, .nav-icon::before{
-//         content: "";
-//         display: inline-block;
-//         width: 24px;
-//         height: 2px;
-//         background-color: white;
-//         position: absolute;
-//     }
-//     .nav-icon::after{
-//         transform: translateY(8px);
-//         transition: all 0.3s ease-in-out;
-//     }
-//     .menu-btn:checked + .menu-icon .nav-icon::after{
-//         transform: rotate(45deg);
-//     }
-//     .nav-icon::before{
-//         transform: translateY(-8px);
-//         transition: all 0.3s ease-in-out;
-//     }
-//     .menu-btn:checked + .menu-icon .nav-icon::before{
-//         transform: rotate(-45deg);
-//     }
-//     .menu-btn:checked + .menu-icon .nav-icon{
-//         background-color: transparent;
-//     }
-//     .header_nav_links{
-//         flex-direction: column;
-//     }
-//     .mobile{
-//         display: flex;
-//         flex-direction: column;
-//         align-items: flex-end;
-//     }
-//     .header_nav_links{
-//         position: absolute;
-//         background-color: #60A5FA;
-//         left: 0;
-//         right: 0;
-//         top: 6rem;
-//         max-height: 0;
-//         overflow: hidden;
-//     }
-//     .menu-btn:checked ~ .header_nav_links{
-//         max-height: 100vh;
-//     }
-//     .header .header_nav_links{
-//         text-align: right;
-//         gap: 0;
-//     }
-//     .header_nav_links a{
-//         width: 100%;
-//         padding: 2rem;
-//     }
-//     .header_nav_links a:hover{
-//         transform: none !important;
-//         color: white !important;
-//         background-color: #29339b96;
-//     }
-//     .menu-btn{
-//         clip-path: inset(100%);
-//         position: absolute;
-//         height: 1px;
-//         width: 1px;
-//     }
-//     /*FIM-HAMBURGUER*/
-//     .header{
-//         background-position: right;
-//     }
-//     .header_content{
-//         justify-content: end !important;
-//     }
-//     .main .habilidades .container{
-//         flex-direction: column;
-//         gap: 3rem;
-//     }
-//     .sobreMim{
-//         padding: 2rem !important;
-//         padding-bottom: 5rem !important;
-//     }
-//     .header_container{
-//         padding: 1rem;
-//     }
-//     .header_content p:nth-child(2){
-//         font-size: 3em !important;
-//     }
-//     .header_content p:nth-child(3){
-//         text-align: center;
-//     }
-//     .sobreMim_content p{
-//         letter-spacing: normal !important;
-//     }
-//     .projetos_container_content{
-//         flex: auto !important;
-//     }
-//     // .header{
-//     //     min-height: auto;
-//     // }
-//     // .header_content{
-//     //     height: 75% !important;
-//     // }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 48em) {
-    .header {
-        &__title {
-            font-size: 4.6rem;
-        }
-
-        &__info-grid {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        &__actions {
-            flex-direction: row;
+    main {
+        // 5. Home: Coloca o texto e o card 'Disponível' lado a lado
+        .home {
+            display: grid;
+            grid-template-columns: 1fr 1fr; // Duas colunas exatas
+            gap: 4rem;
             align-items: center;
-            gap: 1.6rem;
-        }
 
-        &__link-comigo {
-            padding: 0;
-            margin-left: 0.8rem;
+            .home_infos {
+                margin: 0; // Remove a margem extra do mobile para alinhar com o texto da esquerda
+            }
         }
-    }
-}
-
-/* ----------------------------------------------------
-   MEDIA QUERY: DESKTOP (a partir de 64em / 1024px)
----------------------------------------------------- */
-@media (min-width: 64em) {
-    .header {
-        &__menu-btn {
-            display: none;
-        }
-
-        &__nav {
-            display: block;
-        }
-
-        &__menu {
-            list-style: none;
+        .projetos_caixas{
             display: flex;
-            align-items: center;
-            gap: 3.2rem;
-        }
-
-        &__link {
-            font-size: 1.35rem;
-            color: #94a3b8;
-            text-decoration: none;
-            transition: color 0.2s ease;
-
-            &:hover {
-                color: #ffffff;
-            }
-
-            &--especial {
-                color: #ffffff;
-                font-weight: 500;
+            flex-wrap: wrap;
+            gap: 2rem;
+            .projetos_containers{
+                flex: 1 1 calc((100%/3) - 2rem)
             }
         }
 
-        /* Layout exato do Desktop: Conteúdo à esquerda e Card à direita */
-        &__hero {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 6.0rem;
-            margin-top: 4.0rem;
+        // 6. Habilidades e Contatos: Aproveita o Grid do Tablet e expande para 3 colunas
+        .habilidades .habilidades_container {
+            grid-template-columns: repeat(3, 1fr); 
         }
 
-        &__content {
-            flex: 1;
-            max-width: 66.0rem;
+        .contatos .contatos_container {
+            grid-template-columns: repeat(3, 1fr); 
         }
+    }
 
-        &__card {
-            width: 42.0rem;
-            flex-shrink: 0;
+    footer{
+        text-align: center;
+        .footer_links{
+            justify-content: center;
         }
     }
 }
+
+
