@@ -116,6 +116,7 @@ body {
             text-decoration: none;
             transition: color 0.2s ease, transform 0.2s ease;
             display: inline-block;
+            width: 10rem;
         }
 
         .nav li a:hover {
@@ -550,7 +551,7 @@ main {
             margin-bottom: 1rem;
         }
 
-        >p {
+        p {
             font-size: 1.4em;
             color: #94a3b8;
             line-height: 1.6;
@@ -827,34 +828,36 @@ main {
     .contatos {
         background: linear-gradient(180deg, #030712 0%, #0b0f19 100%);
         padding: 6rem 2rem;
-
-        > span {
-            color: #818cf8;
-            font-size: 1.4em;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
-            display: inline-block;
-        }
-
-        h1 {
-            color: #ffffff;
-            font-weight: 800;
-            font-size: 3.2em;
-            margin: 1rem 0 2rem;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        > p {
-            font-size: 1.6em;
-            color: #94a3b8;
-            margin-bottom: 4rem;
-            line-height: 1.6;
-            max-width: 70ch;
+        .largura-definida{
+            
+            > span {
+                color: #818cf8;
+                font-size: 1.4em;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                text-shadow: 0 0 12px rgba(129, 140, 248, 0.3);
+                display: inline-block;
+            }
+    
+            h1 {
+                color: #ffffff;
+                font-weight: 800;
+                font-size: 3.2em;
+                margin: 1rem 0 2rem;
+                letter-spacing: -0.02em;
+                background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+    
+            > p {
+                font-size: 1.6em;
+                color: #94a3b8;
+                margin-bottom: 4rem;
+                line-height: 1.6;
+                max-width: 70ch;
+            }
         }
 
         .contatos_container {
@@ -1061,7 +1064,7 @@ footer {
 // ===========================================
 // RESPONSIVIDADE: DESKTOP (A partir de 1024px)
 // ===========================================
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     
     // 4. Menu Desktop (Adaptado do seu código original)
     .header { // Corrigido de 'header' para '.header'
@@ -1082,6 +1085,9 @@ footer {
         #menu {
             position: static !important; // Tira o menu do modo flutuante
         }
+        .nav li a{
+            width: auto !important;
+        }
         ul > li a:hover {
             transform: scale(1.1) !important;
             font-weight: normal !important;
@@ -1090,7 +1096,7 @@ footer {
 
     main {
         // 5. Home: Coloca o texto e o card 'Disponível' lado a lado
-        .home {
+        .homeDesktop {
             display: grid;
             grid-template-columns: 1fr 1fr; // Duas colunas exatas
             gap: 4rem;
