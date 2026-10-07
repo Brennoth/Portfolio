@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos</title>
     <link rel="stylesheet" href="../assets/css/projetos.css">
     <link rel="stylesheet" href="../assets/css/projetos.scss">
-    
+
+    <!--FONTE LETRA-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <!--FONTE LETRA-->
+
+    <!--FONTE-ICON-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--FONTE-ICON-->
+
 </head>
+
 <body>
     <header class="header">
 
@@ -27,7 +42,7 @@
                         <li><a href="#">Projetos simples</a></li>
                         <li><a href="#">Projetos intermediário</a></li>
                         <li><a href="#">Projetos complexo</a></li>
-                        
+
 
                     </ul>
                 </nav>
@@ -36,6 +51,98 @@
         </div>
 
     </header>
+
+    <main class="largura-definida">
+        <span>Catálogo</span>
+        <h1>Todos os projetos</h1>
+        <p>0 trabalhos organizados por complexidade. Em cada card você encontra a descrição, as linguagens, o código no
+            GitHub e o link hospedado quando ele já estiver no ar.</p>
+        <section class="projetoSimples">
+            <div class="descrição">
+                <h2>Projetos simples</h2>
+                <p>Páginas e exercícios com HTML, CSS e JavaScript, focados em layout, conteúdo e fundamentos.</p>
+                <span>4 projeto(s)</span>
+            </div>
+
+            <div class="projetos_caixas">
+                <div class="projetos_containers">
+                    <div class="projetos_containers_content">
+                        <img src="../assets/img/img-projetos/imagem-cafeteria.png" alt="">
+
+                        <div class="projetos_containers_content_texts">
+                            <h2>Cafeteria</h2>
+                            <p>Landing page de uma cafeteria fictícia. O objetivo era treinar hierarquia visual, seções
+                                de
+                                cardápio e um layout que funcionasse bem no celular, apresentando produtos e o clima do
+                                espaço.</p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                            <a href="https://github.com/Brennoth/Cafeteria" target="_blank"><i
+                                    class="fa-brands fa-github"></i> Código no GitHub</a>
+                            <a href="https://brennoth.github.io/Cafeteria/" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>Ver hospedado</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projetos_containers">
+                    <div class="projetos_containers_content">
+                        <img src="assets/img/img-projetos/img-previsãoDoTempo.jpg" alt="">
+
+                        <div class="projetos_containers_content_texts">
+                            <h2>Projeto de previsão do tempo</h2>
+                            <p>Aplicação web desenvolvida para exibir a previsão do tempo atual, utilizando uma API
+                                meteorológica externa. O projeto demonstra conhecimentos em consumo de APIs, requisições
+                                assíncronas (fetch/async-await), manipulação do DOM e organização de dados dinâmicos no
+                                front-end.</p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>API REST</li>
+                                <li>Fetch API</li>
+                            </ul>
+                            <a href="https://github.com/Brennoth/Previsao-do-Tempo" target="_blank"><i
+                                    class="fa-brands fa-github"></i> Código no GitHub</a>
+                            <a href="https://brennoth.github.io/Previsao-do-Tempo/" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>Ver hospedado</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projetos_containers">
+                    <div class="projetos_containers_content">
+                        <img src="assets/img/img-projetos/trabalho-algoritmo.png" alt="">
+
+                        <div class="projetos_containers_content_texts">
+                            <h2>Comparação de preços</h2>
+                            <p>Projeto acadêmico tem como objetivo comparar os preços de uma cesta básica em diferentes
+                                supermercados, utilizando JavaScript para facilitar a análise e visualização dos dados.
+                            </p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a href="https://github.com/Brennoth/Trabalho-Algoritimo" target="_blank"><i
+                                    class="fa-brands fa-github"></i> Código no GitHub</a>
+                            <a href="https://brennoth.github.io/Trabalho-Algoritimo/" target="_blank"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i>Ver hospedado</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
     <script src="../assets/javascript/hamburguerMenu.js"></script>
 </body>
+
 </html>
