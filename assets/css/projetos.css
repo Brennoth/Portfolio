@@ -13,7 +13,8 @@ html {
 body {
   min-height: 100dvh;
   font-family: "Inter", sans-serif;
-  background-color: #030712;
+  /* MELHORIA: Fundo com gradiente radial para um aspecto mais profundo e moderno */
+  background: radial-gradient(circle at top center, #0b1121 0%, #030712 100%);
   color: #f3f4f6;
 }
 
@@ -22,6 +23,9 @@ body {
   margin: 0 auto;
 }
 
+/* ===========================================
+   HEADER E MENU (MANTIDOS EXATAMENTE COMO NO SEU CÓDIGO ORIGINAL)
+   =========================================== */
 .header {
   padding: 2.5rem 2rem;
   position: fixed;
@@ -134,43 +138,66 @@ body {
   transform: translate(70%, -21%);
 }
 
+/* ===========================================
+   CONTEÚDO PRINCIPAL (COM MELHORIAS VISUAIS)
+   =========================================== */
 main {
   margin-top: 10rem !important;
   padding: 2rem;
 }
 main > span {
-  color: #818CD4;
-  font-size: 1.8em;
+  /* MELHORIA: Subtítulo em degradê */
+  background: linear-gradient(90deg, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 main > h1 {
-  color: white;
-  font-size: 3.5em;
-  margin: 1.5rem 0;
+  color: #f8fafc;
+  font-size: 4em;
+  font-weight: 800;
+  margin: 1rem 0 1.5rem;
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
 }
 main > p {
-  color: rgba(255, 255, 255, 0.692);
+  color: #9ca3af;
   font-size: 1.6em;
+  line-height: 1.6;
+  max-width: 70rem;
 }
 main .projetoSimples .descrição {
-  padding-left: 2rem;
-  border-left: 2px solid #6366F1;
+  /* MELHORIA: Borda lateral com degradê */
+  padding-left: 2.5rem;
+  border-left: 3px solid transparent;
+  -o-border-image: linear-gradient(to bottom, #818cf8, #a855f7) 1;
+     border-image: linear-gradient(to bottom, #818cf8, #a855f7) 1;
+  margin-top: 5rem;
 }
 main .projetoSimples .descrição h2 {
-  color: white;
-  font-size: 2.5em;
-  margin-top: 5rem;
+  color: #ffffff;
+  font-size: 2.8em;
+  font-weight: 700;
 }
 main .projetoSimples .descrição p {
-  color: rgba(255, 255, 255, 0.692);
+  color: #9ca3af;
   font-size: 1.6em;
   margin: 1rem 0;
+  line-height: 1.5;
 }
 main .projetoSimples .descrição span {
-  color: rgba(255, 255, 255, 0.452);
+  color: #6366f1;
   font-size: 1.3em;
+  font-weight: 600;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 0.4rem 1.2rem;
+  border-radius: 2rem;
+  display: inline-block;
 }
 main .projetoSimples .projetos_caixas {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 main .projetoSimples .projetos_caixas .projetos_containers {
   margin-bottom: 3rem;
@@ -178,102 +205,162 @@ main .projetoSimples .projetos_caixas .projetos_containers {
 main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content {
   display: flex;
   flex-direction: column;
-  background: rgba(15, 23, 42, 0.5);
+  /* MELHORIA: Efeito Glassmorphism/Neomorphism moderno */
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.6) 100%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 2rem;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 20px rgba(99, 102, 241, 0.1);
-  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 24px rgba(129, 140, 248, 0.15);
+  border-color: rgba(129, 140, 248, 0.4);
 }
 main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content img {
-  border-radius: 2rem 2rem 0 0;
-  flex: 1;
+  width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.6s ease;
+}
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content:hover img {
+  /* MELHORIA: Efeito sutil de zoom na imagem */
+  transform: scale(1.04);
 }
 main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts {
-  padding: 2.5rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+  z-index: 1;
 }
 main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts h2 {
   color: #f8fafc;
   font-size: 2.2em;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  font-weight: 700;
 }
 main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts > p {
-  font-size: 1.4em;
-  color: #cbd5e1;
-  margin: 1.5rem 0;
+  font-size: 1.5em;
+  color: #9ca3af;
+  margin: 1.5rem 0 2.5rem;
   line-height: 1.6;
+  flex-grow: 1;
 }
 main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts ul {
   display: flex;
-  gap: 1rem;
+  gap: 0.8rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts ul li {
-  color: #a5b4fc;
-  font-size: 1.3em;
+  color: #c084fc;
+  font-size: 1.25em;
   font-weight: 600;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  background: rgba(99, 102, 241, 0.1);
-  border-radius: 50px;
-  padding: 0.4rem 1.2rem;
-  width: -moz-fit-content;
-  width: fit-content;
+  border: 1px solid rgba(192, 132, 252, 0.2);
+  background: rgba(192, 132, 252, 0.05);
+  border-radius: 0.8rem; /* Formato de badge mais moderno */
+  padding: 0.5rem 1.2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
-main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-child(4) {
-  color: #f8fafc;
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts ul li:hover {
+  background: rgba(192, 132, 252, 0.15);
+  border-color: rgba(192, 132, 252, 0.4);
+}
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts {
+  /* MELHORIA: Organizando os botões lado a lado */
+}
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.4em;
+  font-weight: 600;
+  border-radius: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  width: -moz-max-content;
+  width: max-content;
+}
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts {
+  /* Botão 1: Código (Estilo Ghost Button) */
+}
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-of-type(1) {
+  color: #e2e8f0;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 2rem;
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1.4em;
-  font-weight: 600;
-  border-radius: 1rem;
-  margin-top: 1.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
 }
-main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-child(4):hover {
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-of-type(1):hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-child(5) {
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts {
+  /* Botão 2: Ver hospedado (Estilo Primary Button) */
+}
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-of-type(2) {
   color: #ffffff;
-  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-  border: none;
-  padding: 1rem 2rem;
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1.4em;
-  font-weight: 600;
-  border-radius: 1rem;
-  margin-top: 1.5rem;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-decoration: none;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  border: 1px solid transparent;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
 }
-main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-child(5) > i {
-  margin-right: 1rem;
+main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-of-type(2):hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  transform: translateY(-3px);
 }
-main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content .projetos_containers_content_texts a:nth-child(5):hover {
-  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
-  transform: translateY(-2px);
+
+@media (min-width: 768px) {
+  main .projetoSimples .projetos_caixas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+  main .projetoSimples .projetos_caixas .projetos_containers {
+    flex: 1 1 calc(50% - 2.5rem);
+    display: flex; /* Alturas iguais para os cards na mesma linha */
+  }
+  main .projetoSimples .projetos_caixas .projetos_containers .projetos_containers_content {
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  /* HEADER ORIGINAL - MANTIDO INTACTO */
+  .header #menu-bar {
+    display: none;
+  }
+  .header .nav {
+    display: block !important;
+  }
+  .header ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+  }
+  .header .header_container {
+    align-items: center;
+  }
+  .header #menu {
+    position: static !important;
+  }
+  .header .nav li a {
+    width: auto !important;
+  }
+  .header ul > li a:hover {
+    transform: scale(1.1) !important;
+    font-weight: normal !important;
+  }
+  main .projetos_containers {
+    flex: 1 1 calc(33.3333333333% - 2.5rem) !important;
+  }
 }/*# sourceMappingURL=projetos.css.map */
